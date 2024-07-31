@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=7.0">
+    <title>Programme d'Appui</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .top-header {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #ffffff;
+            padding: 0.5rem 1rem;
+        }
+        .top-header a {
+            color: #197a26;
+            margin-left: 1rem;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .top-header a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        .main-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0;
+        }
+        .main-header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-header nav a {
+            color: #197a26;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .main-header nav a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 0rem;
+            width: 100%;
+            margin: 0; /* Ensure no margins are added */
+        }
+        .logo-container img {
+            height: 100px;
+        }
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 0rem auto;
+            border-radius: 10px;
+            max-width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #197a26;
+            font-size: 2.5rem;
+        }
+        .banner {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .section img {
+            height: 300px;
+            width: 1400px;
+            margin-right: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section .text {
+            max-width: 100%;
+            text-align: left;
+            font-size: 1.5rem;
+        }
+        .section .text h3 {
+            color: #197a26;
+            font-size: 2rem;
+        }
+        .section .text p {
+            margin: 1rem 0;
+        }
+        .section .text button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease;
+        }
+        .section .text button:hover {
+            background-color: #218838;
+        }
+        .images-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .images-container .image-box {
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(250, 6, 6, 0.1);
+            transition: transform 0.3s ease;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .images-container .image-box img {
+            width: 100%;
+            height: 85%;
+            object-fit: cover;
+        }
+        .images-container .image-box:hover {
+            transform: scale(1.05);
+        }
+        .images-container .image-box .caption {
+            font-size: 1rem;
+            padding: 0.5rem;
+            background-color: #197a26;
+            color: white;
+            text-align: center;
+            height: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .newsletter-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .newsletter-section p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .newsletter-section button {
+            background-color: #197a26;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease;
+        }
+        .newsletter-section button:hover {
+            background-color: #145a1f;
+        }
+        .footer {
+            background-color: #197a26;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+            bottom: 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <a href="#">Inscription</a>
+        <a href="#">Connexion</a>
+    </div>
+    <div class="main-header">
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Evénements & Formations</a>
+            <a href="#">Reporting & Tableau de Bord</a>
+            <a href="#">F.A.Q</a>
+            <a href="#">Contacter nous</a>
+        </nav>
+    </div>
+
+    <div class="logo-container">
+        <img src="indh-logo.png" alt="INDH Logo">
+        <img src="sigLogo.png" alt="SIGMA 3A Logo">
+        
+        
+    </div>
+
+    <div class="content">
+        <img src="Design sans titre.png" alt="Banner Image" class="banner">
+
+        <div class="section">
+            <img src="Roi_Maroc.png" alt="Roi Mohammed VI">
+            <div class="text">
+                <h3>INDH, chantier de règne</h3>
+                <p>L’Initiative Nationale pour le Développement Humain, lancée par Sa Majesté le Roi Mohammed VI, que Dieu L’Assiste, le 18 mai 2005, vise la lutte contre la pauvreté, la précarité et l’exclusion sociale à travers la réalisation de projets d’appui aux infrastructures de base, projets de formation et de renforcement de capacités, d’animation sociale, culturelle et sportive ainsi que la promotion d’activités génératrices de revenus (AGR) et d’emplois.</p>
+                <button>Discours Royaux</button>
+            </div>
+        </div>
+
+        <h2>NOS OFFRES</h2>
+        
+        <div class="images-container">
+            <div class="image-box">
+                <img src="Sensibil.png" alt="Sensibilisation">
+                <div class="caption">Sensibilisation</div>
+            </div>
+            <div class="image-box">
+                <img src="Accomp Technique.png" alt="Accompagnement Technique">
+                <div class="caption">Accompagnement Technique</div>
+            </div>
+            <div class="image-box">
+                <img src="Accomp Financier.png" alt="Accompagnement Financier">
+                <div class="caption">Accompagnement Financier</div>
+            </div>
+        </div>
+
+        <div class="newsletter-section">
+            <p>Inscrivez-vous à la newsletter</p>
+            <button>Abonnez-vous</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright © 2024. Tous les droits sont réservés.
+    </div>
+</body>
+</html>
