@@ -8,5 +8,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chai": "^5.1.1",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mocha": "^10.7.0",
+    "mysql": "^2.18.1"
+  }
 }
